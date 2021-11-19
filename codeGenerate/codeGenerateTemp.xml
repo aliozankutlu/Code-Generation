@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<interface><!--std="C89"-->
+  <file><name>calibration</name><author>aokutlu</author><date>24.11.2020</date><version>1.01</version><brief>Calibration source</brief><copyright>copyright</copyright><prefix>true</prefix></file>
+ 
+  
+      <include>stddef.h</include>
+      <include form="angle">stdint.h</include>
+      <include form="quote">myheader.h</include>
+ 
+	   
+    <define>TAG</define>
+    <define><param>PI</param><value>3.14</value> <comment>This is commnent
+	This is comment</comment></define>
+	<define><param>VOID(VAL)</param><value>CAL(VAL)</value></define>
+
+  
+	<struct><param>position_a</param></struct>
+
+    <struct><param>position_t</param>
+		   <type>float</type>
+		   <member>x</member>
+		   <type>float</type>
+           <member>y</member>
+		   <type>float</type>
+           <member>z</member>
+		   <comment>This is commnent</comment>
+		    <union><param>position_f</param>
+		          <type>uint8</type>
+		          <member>a</member>
+		          <type>uint8</type>
+                  <member>b</member>
+		          <type>uint8</type>
+                  <member>c</member>
+				  <comment>This is commnent</comment>
+                  </union>
+				   <struct><param>position_g</param>
+		          <type>uint8</type>
+		          <member>d</member>
+		          <type>uint8</type>
+                  <member>e</member>
+		          <type>uint8</type>
+                  <member>f</member>
+				  <comment>This is commnent</comment>
+                  </struct>
+				  <struct><param>position_h</param>
+		          <type>uint8</type>
+		          <member>d</member>
+		          <type>uint8</type>
+                  <member>e</member>
+		          <type>uint8</type>
+                  <member>f</member>
+				  <struct><param>position_h</param>
+		          <type>uint8</type>
+		          <member>d</member>
+		          <type>uint8</type>
+                  <member>e</member>
+		          <type>uint8</type>
+                  <member>f</member>
+				  <comment>This is commnent</comment>
+                  </struct>
+				  <comment>This is commnent</comment>
+                  </struct>
+    </struct>
+  
+  
+    <enum><param>positions_t</param></enum>
+    <enum><param>positions</param>
+        <constant>CENTER</constant><value>NULL</value>
+        <constant>LEFT</constant><value>-1</value>
+        <constant>RIGHT</constant><value>1</value>
+    </enum>
+  
+	<union><param>combinator_t</param>
+        <member>foo</member><type>uint32_t</type>
+        <member>bar</member><type>double</type>
+        <member>holder</member><type>double</type>
+    </union>
+	
+	<typedef><param>error_t</param>
+	         <type>
+			  <struct><param>position_t</param>
+		          <type>float</type>
+		          <member>x</member>
+		          <type>float</type>
+                  <member>y</member>
+		          <type>float</type>
+                  <member>z</member>
+				   <union><param>position_f</param>
+		          <type>uint8</type>
+		          <member>a</member>
+		          <type>uint8</type>
+                  <member>b</member>
+		          <type>uint8</type>
+                  <member>c</member>
+				  <comment>This is commnent</comment>
+                  </union>
+				   <struct><param>position_g</param>
+		          <type>uint8</type>
+		          <member>d</member>
+		          <type>uint8</type>
+                  <member>e</member>
+		          <type>uint8</type>
+                  <member>f</member>
+				   <struct><param>position_asd</param>
+		          <type>uint8</type>
+		          <member>d</member>
+		          <type>uint8</type>
+                  <member>e</member>
+		          <type>uint8</type>
+                  <member>f</member>
+				  <comment>This is commnent</comment>
+                  </struct>
+				  <comment>This is commnent</comment>
+                  </struct>
+				   <comment>This is commnent</comment>
+                  </struct></type>
+    </typedef>
+	
+	<typedef><param>error_t</param>
+	         <type>
+			  <union><param>position_t</param>
+		          <type>float</type>
+		          <member>x</member>
+		          <type>float</type>
+                  <member>y</member>
+		          <type>float</type>
+                  <member>z</member>
+				  <comment>This is commnent</comment>
+                  </union></type></typedef>
+	
+	<typedef><param>error_t</param>
+	         <type>
+			 <enum>
+			 <param>positions</param>
+        <constant>CENTER</constant><value>NULL</value>
+        <constant>LEFT</constant><value>-1</value>
+        <constant>RIGHT</constant><value>1</value>
+		 <comment>This is commnent</comment>
+		</enum></type>
+    </typedef>
+			 
+			 
+			 
+	<typedef><param>error</param></typedef>
+	
+  
+    <function form ="static"><return>void</return><name>aokutlu1</name>
+	 <type>float</type>
+	 <param>pram1</param>
+	 <type>uint32</type>
+	 <param>pram2</param>
+	 <type>uint32</type>
+	 <param>pram3</param>
+	</function>
+	
+	<function form ="global"><return>void</return><name>aokutlu2</name>
+	<comment>This is commnent
+	This is commnent</comment>
+	</function>
+
+    <function form ="prototype static"><return>void</return><name>aokutlu3</name>
+	</function>
+	
+	<function form ="prototype"><return>void</return><name>aokutlu8</name>
+	</function>
+	
+	<function form ="prototype extern"><return>void</return><name>aokutlu4</name>
+	</function>
+	
+	<function><return>void</return><name>aokutlu5</name>
+	</function>
+ 
+  
+	<variable form ="static">
+	 <type>float</type>
+	 <param>pram1</param>
+	 <type>uint32</type>
+	 <param>pram2</param>
+	 <type>uint32</type>
+	 <param>pram3</param>
+	 <comment>This is commnent</comment>
+	</variable>
+	
+	<variable form = "global">
+	 <type>float</type>
+	 <param>pram1</param>
+	 <type>uint32</type>
+	 <param>pram2</param>
+	 <type>uint32</type>
+	 <param>pram3</param>
+	 <comment>This is commnent</comment>
+	</variable>
+	
+	<variable form = "constant">
+	 <type>float</type>
+	 <param>pram1</param>
+	 <type>uint32</type>
+	 <param>pram2</param>
+	 <type>uint32</type>
+	 <param>pram3</param>
+	 <comment>This is commnent</comment>
+	</variable>
+	
+	<variable form = "global">
+	 <type>float</type>
+	 <param>pram1</param>
+	 <sizeof>5</sizeof>
+	 <type>float</type>
+	 <param>pram2</param>
+	 <sizeof>6</sizeof>
+	 <comment>This is commnent</comment>
+	</variable>
+ 
+
+</interface>
